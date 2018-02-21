@@ -1,4 +1,13 @@
 class PostsController < ApplicationController
+    http_basic_authenticate_with :name => "dhh", :password => "secret", :except => [:index, :show]
+    
+    # GET /posts
+    # GET /posts.json
+    def index
+        @posts = Post.all
+        respond_to do |format|
+# snipped for brevity
+    
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
