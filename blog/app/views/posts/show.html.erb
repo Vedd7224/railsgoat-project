@@ -6,13 +6,13 @@
 </p>
 
 <p>
-  <b>Title:</b>
-  <%= @post.title %>
+  <b>Faction:</b>
+  <%= @post.faction %>
 </p>
 
 <p>
-  <b>Content:</b>
-  <%= @post.content %>
+  <b>Morality:</b>
+  <%= @post.morality %>
 </p>
 
 <p>
@@ -20,10 +20,10 @@
   <%= join_tags(@post) %>
 </p>
 
-<h2>Comments</h2>
-<%= render @post.comments %>
+<h2>Favorite</h2>
+<%= render @post.favorites %>
 
-<h2>Add a comment:</h2>
+<h2>Add a Character:</h2>
 <%= render "comments/form" %>
 
 
