@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     
     # GET /posts
     # GET /posts.json
-    def index
+def index
         @posts = Post.all
         respond_to do |format|
 # snipped for brevity
@@ -20,7 +20,6 @@ class PostsController < ApplicationController
         format.json { render :json => @posts }
     end
   end
-
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -85,4 +84,4 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:name, :title, :content)
     end
-end
+ end

@@ -1,9 +1,9 @@
 class CreatePosts < ActiveRecord::Migration[5.1]
   def change
-    create_table :posts do |t|
+    create_table :character do |t|
       t.string :name
-      t.string :title
-      t.text :content
+      t.string :faction
+      t.text :team
 
       t.timestamps
     end
